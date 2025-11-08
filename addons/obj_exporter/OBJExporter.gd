@@ -29,7 +29,7 @@ func save_mesh_to_files(mesh: Mesh, file_path: String, object_name: String) -> v
 
 		var mat: StandardMaterial3D = mesh.surface_get_material(s)
 
-		Output.append("g surface %s\n" % [s])
+		Output.append("g surface%s\n" % [s])
 
 		for v: Vector3 in surface[ArrayMesh.ARRAY_VERTEX]:
 			Output.append("v %s %s %s\n" % [v.x, v.y, v.z])
